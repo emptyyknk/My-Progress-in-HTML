@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Text</title>
+</head>
+<body>
+    <h1>Chapter 2: Text</h1>
+    <ul>
+        <li>Headings & Paragraph</li>
+        <li>Bold, italic, & emphasis</li>
+        <li>Structural and semantic markup</li>
+    </ul>
+    <br><br>
+
+    <h2>Headings</h2> <!-- Headings-->
+    <h1>Heading Main</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <h2>Paragraph</h2> <!-- Paragraph -->
+    <p>To create a paragraph, surround the words that make up the paragraph with an opening < p> tag and closing < /p> tag.</p>
+    
+    <h2>Bold & Italic</h2> <!-- Bold & Italic -->
+    <p>
+        By enclosing words in the tags < b> and < /b> we can make characters appear <b>bold</b>.
+        <br>
+        example : <br>
+        This is how we make a word appear <b>bold.</b>
+    </p>
+    <br>
+    <h2>Superscript & Subscript</h2> <!-- Superscript & Subscript -->
+    <p>
+        This is Superscript element using < sup> 4<sup>th</sup>.
+    </p>
+    <p>
+        This is Subscript element using < sub> CO<sub>2</sub>.
+    </p>
+
+    <h2>White Space</h2> <!-- White Space -->
+    <p>
+        In order to make code easier to read, web page authors often add extra spaces or start some elements on new lines.
+        <br> When the browser comes across two or more spaces next to each other, it only displays one space. Similarly if it comes across a line break, it treats that as a single space too. This is known as
+        <b>white space collapsing.</b>
+    </p> <!-- End -->
+
+    <h2>Line Breaks & Horizontal Rules</h2> <!-- Line Breaks & Horizontal Rules-->
+    <p>
+        he Earth this is using < br><br />gets one hundred tons heavier every day<br />due to falling space dust.
+    </p><br>
+    <p>
+        Venus is the only planet that rotates clockwise. (This is using Horizontal Rules)
+    </p><hr>
+    <p>
+        Jupiter is bigger than all the other planets combined.
+    </p>
+    <br> <!-- End -->
+
+    <h2>Semantic & Markup</h2> 
+    <p>
+        There are some text elements that are not intended to affect the structure of your web pages, but they do add extra information to the pages — they are known as <i>semantic markup</i>.
+    </p>
+
+    <h3>Strong & Emphasis</h3> <!-- Strong & Emphasis -->
+    <h4><code>< strong></code></h4>
+    <p>
+        The use of the <b>< strong></b> element indicates that its content has strong importance. For example, the words contained in this element might be said with strong emphasis.
+            By default, browsers will show the contents of a <b>< strong></b> element in bold.
+    </p>
+    <h4>< em></h4>
+    <p>
+        The <i>< em></i> element indicates emphasis that subtly changes the meaning of a sentence.
+            By default browsers will show the contents of an <i>< em></i> element in italic. 
+    </p>
+    <p><b>Example: </b></p> <!-- Example -->
+    <p>
+        <strong>Beware:</strong> Pickpockets operate in this area
+    </p><br> <!-- End -->
+
+
+
+    <h3>Quotations</h3> <!-- Quatations -->
+    <h4><code>< blockquote></code></h4>
+    <p>
+        The <code>< blockquote></code> element is used for longer quotes that take up an entire paragraph. Note how the < p> element is still used inside the <br><code>< blockquote></code> element.
+        <br>Browsers tend to indent the contents of the <code>< blockquote></code> element, however you should not use this element just to indent a piece of text — rather you should achieve this effect using CSS.
+    </p>
+    <h4><code>< q></code></h4>
+    <p>
+        The <code>< q></code> element is used for shorter quotes that sit within
+        a paragraph. Browsers are supposed to put quotes around the <code>< q></code> element, however Internet Explorer does not — therefore many people avoid using the <code>< q></code> element.
+        <br>Both elements may use the cite attribute to indicate where the quote is from. Its value should be a URL that will have more information about the source of the quotation.
+    </p>
+    <h4>Result</h4> <!-- Result -->
+    <blockquote cite="http://en.wikipedia.org/wiki/Winnie-the-Pooh">
+        <p>
+            Did you ever stop to think, and forget to start again?
+        </p>
+    </blockquote>
+    <p>
+        As A.A. Milne said, 
+        <q>Some people talk to animals. Not many listen though. That's the problem.</q>
+    </p>
+
+    <h3>Abbreviations & Acronyms</h3> <!-- Abbreviations & Acronyms -->
+    <h4><code>< accr></code> & <code>< abbr></code></h4>
+    <p>
+        <abbr title="Professor">Prof</abbr> is a theoretical physicist and cosmologist.
+    </p>
+    <p> <!-- Acronym not exist in HTML5 -->
+        <acronym title="National Aeronautics and Space Administration">NASA</acronym> do some crazy space stuff.
+    </p>
+    
+    <h3>Citations & Definitions</h3> <!-- Citations & Definitions -->
+    <h4><code>< cite></code></h4>
+    <p>
+        When you are referencing a piece of work such as a book, film or research paper, the <code>< cite></code> element can be used to indicate where the citation is from.
+        <br> In HTML5, <code>< cite></code> should not really be used for a person's name — but it was allowed in HTML 4, so most people are likely to continue to use it.
+    </p>
+    <p><b>Result: </b></p>
+    <p>
+        <cite>A Brief History of Time</cite> by Stephen Hawking has sold over ten million copies worldwide.
+    </p>
+    <h4><code>< dfn></code></h4>
+    <p>
+       The First time you explain some new terminology (perhaps an academic concept or some jargon) in a document, it is known as the defining instance of it.
+       <br> The <code>< dfn></code> element is used to indicate the defining instance of a new term.   
+    </p>
+    <blockquote>
+        <p>
+            Some browsers show the content of the <code>< dfn></code> element in italics. Safari and Chrome do not change its appearance. 
+        </p>
+    </blockquote>
+    <p><b>Result: </b></p>
+    <p>
+        A <dfn>black hole</dfn> is a region of space from which nothing, not even light, can escape.
+    </p><br>
+
+    <h3>Author Details</h3> <!-- Author Details -->
+    <h4><code>< address></code></h4>
+    <p>
+        The <code>< address></code> element has quite a specific use: to contain contact details for the author of the page.
+        <br>It can contain a physical address, but it does not have to. For example, it may also contain a phone number or email address.
+    </p>
+    <p><b>Result: </b></p>
+    <address>
+        <p>
+            <a href="mailto:krismayogaa@gmail.com">krismayogaa</a>
+        </p>
+        <p>742 Evergreen Terrace, Springfield.</p>
+    </address>
+    <br>
+
+    <h3>Changes to Content</h3> <!-- Changes to Content -->
+    <h4><code>< ins></code></h4>
+    <h4><code>< del></code></h4>
+
+    <p>
+        The <code>< ins></code> element can be used to show content that has been inserted into a document, while the <code>< del></code> element can show text that has been deleted from it.
+    </p>
+    <p><i>The content of a <code>< ins></code> element is usually underlined, while the content of a <code>< del></code> element usually has a line through it.
+    </i></p>
+
+    <h4>Result: </h4> <!-- Result -->
+    <p>
+        It was the <del>worst</del> <ins>best</ins> idea she had ever had.
+    </p>
+
+    <h4><code>< s></code></h4>
+    <p>
+        The <code>< s></code> element indicates something that is no longer accurate or relevant (but that should not be deleted).
+    </p>
+    <p>
+        Visually the content of an <<code>< s></code>> element will usually be displayed with a line through the center.
+    </p>
+    <p><b>Result: </b></p>
+    <p>Laptop computer:</p> <p><s>Was $995</s></p> <p>Now only $375</p>
+</body>
+</html>

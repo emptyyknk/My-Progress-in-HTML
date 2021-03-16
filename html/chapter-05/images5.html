@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Images</title>
+</head>
+<body>
+
+    
+    <h1>Chapter 5: Images</h1> <!-- Chapter 5: Images -->
+    <ul style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <li>How to add images to pages</li>
+        <li>Choosing the right format</li>
+        <li>Optimizing image from the web</li>
+    </ul>
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">
+        There are many reasons why you might want to add an image to a web page: <br> 
+        you might want to include a logo, photograph, illustration, diagram, or chart.
+    </p>
+    <p style="font-size: 15px;">
+        There are several things to consider when selecting and preparing images for your site, but taking time to get them <br>
+        right will make it look more attractive and professional. In this chapter you will learn how to:
+    </p>
+    <ul>
+        <li>Include an image in your web pages using HTML</li>
+        <li>Pick which image format to use</li>
+        <li>Show an image at the right size</li>
+        <li>Optimize an image for use on the web to make pages load faster</li>
+    </ul>
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 15px; color: grey;">
+        You can also use CSS to include images in your pages using the background-image property, which you will meet on pages 413-420.
+    </p><br>
+
+    <!-- Choosing image for your site -->
+    <h2>CHOOSING IMAGE FOR YOUR SITE</h2>
+    <blockquote>
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">
+            A picture can say a thousand words, and great 
+            <br> images help make the difference between an
+            <br> average-looking site and a really engaging one.
+        </p>
+    </blockquote>
+    <p style="font-size: 12px;">
+        Images can be used to set the tone for a site in less time than it takes to read a description. <br> 
+        If you do not have photographs to use on your website, there are companies who sell <b>stock images</b>; <br> 
+        these are images you pay to use (there is a list of stock photography websites below).<br> 
+        Remember that all images are subject to copyright, and you can get in trouble for simply taking photographs from another website.<br> 
+        If you have a page that shows several images (such as product photographs or members of a team) then putting them on a simple, consistent background helps them look better as a group.
+    </p>
+
+    <!-- Image should -->
+    <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">IMAGE SHOULD...</h4>
+    <ul>
+        <li>Be relevant</li>
+        <li>Convey information</li>
+        <li>Convey the right mood</li>
+        <li>Be instantly recognisable</li>
+        <li>fit the color palette</li>
+    </ul>
+
+    <!--Stock photos -->
+    <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">STOCK PHOTOS</h4>
+    <ul>
+        <li>www.istockphoto.com</li>
+        <li>www.gettyimages.com</li>
+        <li>www.veer.com</li>
+        <li>www.sxc.hu</li>
+        <li>www.fotolia.com</li>
+    </ul>
+
+    <!-- Extra -->
+    <h4 style="color: orangered; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">ONLINE EXTRA</h4>
+    <p>
+        We have provided an online gallery that helps you choose the right image for your website. <br> 
+         You can find it in the tools section of the site accompanying this book.
+    </p>
+    <br>
+
+    <!-- Storing images on your site -->
+    <h2>STORING IMAGES ON YOUR SITE</h2>
+    <blockquote>
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">
+            If you are building a site from scratch, it is good <br> 
+            practice to create a folder for all of the images <br> 
+            the site uses.
+        </p>
+    </blockquote>
+    <p>
+        As a website grows, keeping images in a separate folder helps you understand how the site is organized. <br> 
+        Here you can see an example of the files for a website; all of the images are stored in a folder called <b><i>images</i></b>. <br><br>
+        
+        On a big site you might like to add subfolders inside the <i><b>images</b></i> folder. For example, images such as logos <br> 
+        and buttons might sit in a folder called <i><b>interface</b></i>, product photographs might sit in a page called <i><b>products</b></i>, <br> 
+        and images related to news might live in a folder called <i><b>news</b></i>. <br><br>
+
+        If you are using a content management system or blogging platform, there are usually tools built into the <br> 
+        admin site that allow you to upload images, and the program will probably already have a separate folder <br> 
+        for image files and any other uploads.
+    </p>
+    <img src="../chapter-05/images/imagesfolder.jpg" alt="Storing images" width="461" height="202">
+    <br><br>
+
+    <!-- Adding Images -->
+    <h2>ADDING IMAGES</h2>
+    <h3 style="color: rgb(9, 158, 218);"><code>< img></code></h3>
+    <p>
+        To add an image into the page you need to use an <code>< img></code> element. This is an empty element <br> 
+        (which means there is no closing tag). It must carry the following two attributes:
+    </p>
+
+    <h4 style="color: rgb(9, 158, 218);">src</h4>
+    <p>
+        This tells the browser where it can find the image file. This will usually be a relative URL pointing to an image on your own site. <br>
+        (Here you can see that the images are in a child folder called <i><b>images</b></i> — relative URLs were covered on pages 83-84).
+    </p>
+
+    <h4 style="color: rgb(9, 158, 218);">alt</h4>
+    <p>
+        This provides a text description of the image which describes the image if you cannot see it.
+    </p>
+
+    <h4 style="color: rgb(9, 158, 218);">title</h4>
+    <p>
+        You can also use the <code>title</code> attribute with the <code>< img></code> element to provide additional information about the image. <br>
+        Most browsers will display the content of this attribute in a tootip when the user hovers over the image.
+    </p>
+
+    <blockquote>
+        <p style="color: grey;">
+            The text used in the alt attribute is often referred to as alt text. It should give an accurate description of the image content so it can be understood by <br>
+            screen reader software (used by people with visual impairments) and search engines. If the image is just to make a page look more attractive (and it <br> 
+            has no meaning, such as a graphic dividing line), then the alt attribute should still be used but the quotes should be left empty.
+        </p>
+    </blockquote>
+    <h4>Result: </h4> <!-- Result -->
+    <img src="../chapter-05/images/quokka.jpg" alt="Quokka" title="The quokka is an Australian marsupial that is similar in size to the domestic cat.">
+    <br><br>
+
+    <h2>HEIGHT & WIDTH OF IMAGES</h2> <!-- Height & weight of images -->
+    <p>
+        You will also often see an < img> element use two other attributes that specify its size:
+    </p>
+    <h4 style="color: rgb(9, 158, 218);"><code>height</code></h4>
+    <p>
+        This specifies the height of the image in pixels.
+    </p>
+    <h4 style="color: rgb(9, 158, 218);"><code>width</code></h4>
+    <p>
+        This specifies the width of the image in pixels.
+    </p>
+    <p>
+        Images often take longer to load than the HTML code that makes up the rest of the page. It is, therefore, a good idea to specify the size of the <br>
+         image so that the browser can render the rest of the text on the page while leaving the right amount of space for the image that is still loading.
+    </p>
+    <blockquote>
+        <p style="color: rgb(104, 100, 100); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            The size of images is increasingly being specified using CSS rather than HTML — see pages 409-410 for more information about this.
+        </p>
+    </blockquote>
+
+    <!-- Result -->
+    <h4>Result: </h4>
+    <img src="../chapter-05/images/quokka.jpg" alt="Quokka" width="310" height="175"><br><br>
+
+    <!-- Where the place images in your web -->
+    <h2>WHERE THE PLACE IMAGES IN YOUR WEB</h2>
+    <p>
+        Where an image is placed in the code will affect how it is displayed. 
+        <br> Here are three examples of image placement that produce different results:
+    </p>
+
+    <!-- 1. BEFORE A PARAGRAPH -->
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">1. BEFORE A PARAGRAPH</p>
+    <p>
+        The paragraph starts on a new line after the image.
+    </p>
+    <!-- 2. INSIDE A START OF A PARAGRAPH -->
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">2. INSIDE A START OF A PARAGRAPH</p>
+    <p>
+        The first row of text aligns with the bottom of the image.
+    </p>
+    <!-- 3. IN THE MIDDLE OF A PARAGRAPH -->
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey;">3. IN THE MIDDLE OF A PARAGRAPH</p>
+    <p>
+        The image is placed between the words of the paragraph that it appears in.
+    </p>
+
+    <!-- Result -->
+    <h4>Result: </h4> 
+    <h4>1.</h4>
+    <img src="../chapter-05/images/bird.jpeg" alt="Bird" width="130" height="97">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <br> 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br>
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <h4>2.</h4>
+    <p><img src="../chapter-05/images/bird.jpeg" alt="Bird" width="130" height="97">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <br> 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br>
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <h4>3.</h4>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> 
+        <img src="../chapter-05/images/bird.jpeg" alt="Bird" width="130" height="97"> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <br> 
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat <br>
+        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <br>
+
+    <!-- Notice image placement -->
+    <p>
+        Where you place the image in the code is important because browsers show HTML elements in one of two ways:
+    </p>
+    <p>
+        <b>Block elements always appear on a new line.</b> Examples of block elements include the <code>< h1></code> and <code>< p></code> elements. <br>
+        <br> If the <code>< img></code> is followed by a block level element (such as a paragraph) then the block level element will sit on a <br> new line after the imageas shown in the first example on this page.
+    </p>
+    <p>
+        <b>Inline elements sit within a block level element and do not start on a new line.</b> Examples of inline elements <br> include the <code>< b></code>, <code>< em></code>, and <code>< img></code> elements.
+    </p>
+    <p>
+        If the <code>< img></code> element is inside a block level element, any text or other inline elements will flow around the image as <br>
+        shown in the second br and third examples on this page.
+    </p>
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: grey; font-size: 15px;">
+        Block and inline elements are discussed in greater depth on pages 185-186.
+    </p><br>
+
+    <!-- OLD CODE: ALIGNING IMAGES HORIZONTALLY -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">OLD CODE: ALIGNING IMAGES HORIZONTALLY</h2>
+    <h4 style="font-family: 'Courier New', Courier, monospace; color: rgb(9, 158, 218); font-size: 15px;"><code>align</code></h4>
+    <p>
+        The <code>align</code> attribute was commonly used to indicate how the other parts of a page should flow around an image. It has <br> 
+        been removed from HTML5 and new websites should use CSS to control the alignment of images (as you will see on <br> pages 411-412).
+    </p> 
+    <p>
+        I have discussed it here because you are likely to come across it if you look at older code, and because some visual <br> 
+        editors still insert this attribute when you indicate how an image should be aligned.
+    </p>
+    <p>
+        The align attribute can take these horizontal values:
+    </p>
+
+    <!-- Left -->
+    <h4 style="font-family: 'Courier New', Courier, monospace; color: grey;">left</h4>
+    <p>
+        This aligns the image to the left (allowing text to flow around its right-hand side).
+    </p>
+
+    <!-- Right -->
+    <h4 style="font-family: 'Courier New', Courier, monospace; color: grey;">right</h4>
+    <p>
+        This aligns the image to the right (allowing text to flow around its left-hand side).
+    </p>
+
+    <!-- Result -->
+    <h4>Result: </h4>
+    <p>
+        <img src="../chapter-05/images/bird.jpeg" alt="Bird" width="130" height="97" style="float: left;"> 
+        There are around 10,000 living species of birds that inhabit different ecosystems from the <br> 
+        Arctic to the Antarctic. Many species undertake long distance annual migrations, and many <br> 
+        more perform shorter irregular journeys
+    </p><br><br><hr>
+    <p>
+        <img src="../chapter-05/images/bird.jpeg" width="130" height="97" alt="Bird" style="float: right;">
+        There are around 10,000 living species of birds that inhabit different ecosystems from the <br> 
+        Arctic to the Antarctic. Many species undertake long distance annual migrations, and many <br> 
+        more perform shorter irregular journeys
+    </p>
+    <br><br>
+
+    <!-- OLD CODE: ALIGNING IMAGES VERTICALLY -->
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">
+    OLD CODE: ALIGNING IMAGES VERTICALLY</h4>
+    <p>
+        As you saw on the last page, the align attribute is no longer used in HTML5, but it is covered here because you <br> 
+        may see it used in older websites and it is still used in the code created by some visual editors.
+    </p>
+    <p>
+        You can see how to use CSS to achieve the same effects on pages 285-286.
+    </p>
+    <p>
+        There are three values that the align attribute can take that control how the image should align vertically with <br> 
+        the text that surrounds it:
+    </p>
+
+    <h4 style="color: grey;"><code>top</code></h4>
+    <p>
+        This aligns the first line of the surrounding text with the top of the image.
+    </p>
+    <h4 style="color: grey;"><code>middle</code></h4>
+    <p>
+        This aligns the first line of the surrounding text with the middle of the image.
+    </p>
+    <h4 style="color: grey;"><code>bottom</code></h4>
+    <p>
+        This aligns the first line of the surrounding text with the bottom of the image.
+    </p>
+
+    <!-- Result -->
+    <h4>Result: </h4>
+    <p>
+        <img src="../chapter-05/images/bird.jpeg" width="130" height="97" alt="Bird" style="float: top;">
+        There are around 10,000 living species of birds that inhabit different ecosystems from the <br> 
+        Arctic to the Antarctic. Many species undertake long distance annual migrations, and many <br> 
+        more perform shorter irregular journeys
+    </p><hr>
+    <p>
+        <img src="../chapter-05/images/bird.jpeg" width="130" height="97" alt="Bird" style="float: middle;">
+        There are around 10,000 living species of birds that inhabit different ecosystems from the <br> 
+        Arctic to the Antarctic. Many species undertake long distance annual migrations, and many <br> 
+        more perform shorter irregular journeys
+    </p><hr>
+    <p>
+        <img src="../chapter-05/images/bird.jpeg" width="130" height="97" alt="Bird" style="float: bottom;">
+        There are around 10,000 living species of birds that inhabit different ecosystems from the <br> 
+        Arctic to the Antarctic. Many species undertake long distance annual migrations, and many <br> 
+        more perform shorter irregular journeys
+    </p>
+
+    <p>
+        The value of top places the first line of text near the top of the image and subsequent lines of text appear under the image.
+    </p>
+    <p>
+        The value of middle places the first line of text near the vertical middle of the image and subsequent lines of text appear <br> under the image.
+    </p>
+    <p>
+        The value of bottom places the first line of text near bottom of the images and subsequent lines of the text under the image
+    </p>
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey; font-size: 15px;">
+
+        When to text flows right up to the edge of an image it can make it harder to read. You will learn how to add <br>
+        a gap between text and images on pages 313-314 using the CSS <code>padding</code> and margin properties.
+    </p>
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey; font-size: 15px;">
+        If you would like all of the tex to wrap around the image )rather than just one line of text), you should use <br> 
+        the CSS <code>float</code> property discussed on pages 370-372.
+    </p>
+
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 15px; color: grey;">
+        In older code, you may see the <code>align</code> attribute used with the value <code>left</code> and <code>right</code> to achieve the same <br> 
+        effect (as described on the previous page), although its use is no longer recommended.
+    </p>
+    <br>
+
+    <!-- Three Rules to creating images-->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">
+        THREE RULES TO CREATING IMAGES
+    </h2>
+    <blockquote>
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(134, 129, 129);">
+            There  are three rules to remember when you are creating images for your website which <br> 
+            are summarized below. We go into greater detail on each topic over the next nine pages.
+        </p>
+    </blockquote>
+    
+    <!-- Rule 1 -->
+    <img src="../chapter-05/images/one1.png" alt="Rule one">
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">
+        SAVE IMAGES IN THE RIGHT FORMAT
+    </h4>
+    <p>
+        Website mainly use images in jpeg, gif, or png format. If you choose the wrong image format <br>
+        then your image might not look as sharp as it should and can make the web page slower to load.
+    </p>
+
+    <!-- Rule 2 -->
+    <img src="../chapter-05/images/two2.png" alt="Rule two">
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">
+        SAVE IMAGE AT THE RIGHT SIZE
+    </h4>
+    <p>
+        You should save the images at the same width and height it will appear on the website. If the <br> 
+        image is smaller than the width or height that you have specified, the image can be distorted <br>
+        and stretched. If the image is larger than the width or height that you have specified, the <br> 
+        image will take longer to display on the page.
+    </p>
+
+    <!-- Rule 3 -->
+    <img src="../chapter-05/images/three3.png" alt="Rule three">
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">
+        USE THE CORRECT RESOLUTION
+    </h4>
+    <p>
+        Computer screens are made up of dots known as pixels. Images used on the web are also made <br>
+        up to tiny dots. Resolution refers to the number of dots per inch, and most computer screens <br> 
+        only show web pages at 72 pixels per inch. So saving images at higher resolution results in <br> 
+        images that are larger than neccesary and take longer to download.
+    </p><br>
+
+    <!-- Tools to edit & save images -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">
+        TOOLS TO EDIT & SAVE IMAGES
+    </h2>
+    <blockquote>
+        <p>
+            There are several tools you can use to edit and save images to ensure that <br> 
+            they are the right size, format, and resolution.
+        </p>
+    </blockquote>
+    <img src="../chapter-05/images/psd.jpg" alt="Photoshop" style="float: right;">
+    <p>
+        The most popular tool amongst web professionals is <b>Adobe Photoshop</b>. (In fact, professionals <br>
+        web designers often use this software to design to entire sites.) The full version of Photoshop is <br> 
+        expensive, but there is a Cheaper version called Photoshop Elements which would suit the needs <br> 
+        of the most beginners.
+    </p>
+
+    <!-- Tips source -->
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Light', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">OTHER SOFTWARE</h4>
+    <ul>
+        <li>Adobe Fireworks</li>
+        <li>Pixelmator</li>
+        <li>Paint Shop Pro</li>
+        <li>Paint.net</li>
+    </ul>
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">ONLINE EDITORS</h4>
+    <ul>
+        <li>www.photoshop.com</li>
+        <li>www.pixlr.com</li>
+        <li>www.splashup.com</li>
+        <li>www.ipiccy.com</li>
+    </ul>
+
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(216, 91, 46);">ONLINE EXTRA</h4>
+    <p>
+        Watch videos that demonstrate how to resize images and save them in the correct format using both of these applications.
+    </p>
+    <br>
+
+
+    <!-- Image formats: JPG -->
+    <h2 style="color: grey; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">IMAGE FORMATS: JPEG</h2>
+    <p>
+        Whenever you have many different color in a picture you should use a JPEG. A photography <br> 
+        that features snow or an overcast sky might look like it has large areas that are just white or <br> 
+        gray, but the picture is usually made up of many different colors that are subtly different. 
+    </p>
+    <img src="../chapter-05/images/jpg.jpg" alt="Example JPG">
+    <br><br>
+
+    <!-- Image formats: GIF -->
+    <h2 style="color: grey; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">IMAGE FORMATS: GIF</h2>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">
+            Use GIF or PNG format when saving formats with few colors or larger areas of the same color.
+        </p>
+    </blockquote>
+    <p>
+        When a picture has an area that is filled with exactly the same color, it is known as flat color. <br> 
+        Logos, illustration, and diagrams often use flat colors. (Note that photographs of snow, sky, <br> 
+        or grass are not flat colors, they are made up of many subtly different shades of the same <br> 
+        color and are not as suited to GIF or PNG format.)
+    </p>
+    <img src="../chapter-05/images/png.png" alt="Formats PNG">
+    <br><br>
+
+
+    <!-- Image Dimensions -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">IMAGE DIMENSIONS</h2>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: grey;">
+            The images you use often in website should be saved at the same <br> 
+            width and height that you want them to appear on the page.
+        </p>
+    </blockquote>
+
+    <p style="font-size: 15px;"> 
+        For example, if you have designed a page to include an image that is 300 pixels <br> 
+        wide by 150 pixels tall, the image you use should be 300 x 150 pixels. You may <br> 
+        need to use image editing tools to resize and crop the image. When sourcing <br> 
+        images, it is important to understand how you can alter the dimensions of an <br> 
+        image; imagine that you had designed a web page to include an image that is <br> 
+        300 pixels wide by 150 pixels tall:
+    </p>
+    
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(216, 91, 46); font-size: 13px;">ONLINE EXTRA</h4>
+    <p>
+        Visit the tools section of the website accompanying this book to watch a video guide to resizing images in Photoshop and GIMP.
+    </p><br>
+
+    <!-- Reducing Image Size-->
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">REDUCING IMAGE SIZE</h4>
+    <p>
+        You can reduce the size of images to create a smaller version of the image.
+    </p>
+    <img src="../chapter-05/images/reducing.png" alt="Reducing Image Size">
+    <p>
+        <b>Example: </b> If your image is 600 pixels wide and 300 pixels tall, you can reduce the size of the image by 50%.
+    </p>
+    <p>
+        <b>Result: </b>This will create an image that is quicker to download.
+    </p><br>
+
+    <!-- Increasing Image Size -->
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">INCREASING IMAGE SIZE</h4>
+    <img src="../chapter-05/images/increasing.png" alt="Increasing image size">
+    <p>
+        You can't increase the size of photos significantly without affecting the image quality.
+    </p>
+    <p>
+        <b>Example: </b>If your image is only 1000 pixels wide by 50 pixels tall, increasing the size by 300% would result in poor quality.
+    </p>
+    <p>
+        <b>Result: </b>The image will look blurry or blocky
+    </p><br>
+
+
+    <!-- Changing shape -->
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">CHANGING SHAPE</h4>
+    <p>
+        Only some images can be cropped without losing valuable information (see next page.)
+    </p>
+    <img src="images/changing shape.png" alt="changing size">
+    <p>
+        <b>Example: </b>If your images is 300 pixel square, you can remove part of it. but in doing so you might lost valuable information.
+    </p>
+    <p>
+        <b>Result: </b>Only some images can be cropped and still make senses
+    </p>
+    <br><br>
+
+
+    <!-- Cropping images -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(104, 100, 100);">CROPPING IMAGES</h2>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: rgb(134, 129, 129);font-size: 15px;"> 
+            When cropping images it is important not to lose valuable information. It is best to source images that are the correct shape if possible.
+        </p>
+    </blockquote>
+    <img src="images/cropping.png" alt="Cropping images"><br>
+
+
+    <!-- Image Resolution -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(104, 100, 100);">IMAGE RESOLUTION</h2>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">
+            Image created for the web should be saved at <br>
+            a resolution of 72 <abbr title="Pixels Per Inch">ppi</abbr>. The higher of resolution <br> 
+            of the image, the larger the size of the file.
+        </p>
+    </blockquote>
+    <p>
+        JPGs, GIFs, and PNGs belongs to a type of format known as <b>bitmap</b>. They are <br> 
+        made up of a lots of miniature squares. The <b>resolution</b> of an image is number <br> 
+        of squares that fit within a 1 inch x 1 inch square.
+    </p>
+    <p>
+        Images appearing on a <b>computer</b> screens are made of tiny squares called <b>pixels</b>.<br>
+        A small segment of this photograph has been magnified of to show how it is made <br> 
+        up to pixels. The web browsers on most desktop computer display images at a <br> 
+        resolution <b>72</b> pixels per inch (ppi). Image in <b>prints</b> materials (such as books and <br> 
+        magazines) are made up of tiny circles called <b>dots</b>. These images are usually <br> 
+        printed at a resolution of 300 dots per inch (dpi).
+    </p>
+    <p>
+        For the image: <br>
+        JPEG at 300 dpi = 1,526kb <br> 
+        JPEG at 72 ppi = 368kb
+    </p>
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139); font-size: 12px;">
+        Due to the fact that computer displays are capped at a resolution of 72 ppi, using images <br> 
+        on the web with a higher resolution will not result in better image quality — only in larger <br> 
+        file sizes, which will increase the time needed to load them and therefore slow down <br> 
+        viewing of your web pages.
+    </p><br><br>
+
+    <!-- Vector Images -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">VECTOR IMAGES</h2>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: rgb(104, 100, 100);">
+            Vector images differ from bitmap images and <br>
+            are resolution-independent. Vector images are <br>
+            commonly created in programs such as Adobe <br>
+            Illustrator.
+        </p>
+    </blockquote>
+    <p>
+        When an image is a line drawing (such as a logo, illustration, or diagram), <br> 
+        designers will often create it in vector format. Vector formatted images are <br>
+        very different to bitmap images.
+    </p>
+    <p>
+        Vector images are created by placing points on a grid, and drawing lines between <br> 
+        those points. A color can then be added to "fill in" the lines that have been created.
+    </p>
+    <p>
+        The advantage of creating line drawings in vector format is that you can increase <br> 
+        the dimensions of the image without affecting the quality of it.
+    </p><br>
+
+    <img src="images/vector.png" alt="Panda Vector" style="float: right;" width="154" height="134">
+    <p>
+        The current method of using vector images for display on websites involves saving <br> 
+        a bitmap version of the original vector image and using that.
+    </p>
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(104, 100, 100); font-size: 15px;">
+        Scalable Vector Graphics <abbr title="Scalable Vector Graphics">(SVG)</abbr> are a relatively new format used to display vector images <br> 
+        directly on the web (eliminating the need to create bitmap versions of them), however its <br>
+        use is not yet widespread.
+    </p><br>
+
+
+    <!-- Animated GIFs-->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(134, 129, 129);">
+        ANIMATED GIFS
+    </h2>
+    <blockquote>
+        <p style="color: rgb(134, 129, 129); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Animated GIFs show several frames of an <br> 
+            image in sequence and therefore can be used to <br> 
+            create simple animations.
+        </p>
+    </blockquote>
+
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 13px;">
+        Below you can see the individual frames that make up an animated GIF that shows an orange dot <br> 
+        revolving around a circle — like the kind of animation you might see when a web page is loading.
+    </p>
+    <p>
+        Some image editing applications such as Adobe Photoshop allow you to create animated GIFs. <br> 
+        There are several tutorials about how to do this on the web. There are also several websites <br> 
+        that allow you to upload the graphics for the individual frames and create the animated GIF <br>
+        for you.
+    </p>
+    <!-- Is it important to remember -->
+    <h4 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">IT IS IMPORTANT TO REMEMBER</h4>
+    <p>
+        Each extra frame of the image increases the size of the file, and can therefore add to the time <br> 
+        it takes for an image to download (and web users do not like waiting a long time for images <br> 
+        to download).
+    </p>
+    <p>
+        Because GIFs are not an ideal format for displaying photographs,<br> 
+        animated GIFs are really only suitable for simple illustrations.
+    </p>
+    <img src="images/animegif.png" alt="Animated GIF">
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 13px;">
+        Some designers frown on animated GIFs because they remember <br>
+        a lot of amateur web designers overusing them in the 1990's.
+    </p><br><br>
+
+    <!-- Transparency -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">TRANSPARENCY</h2>
+    <blockquote>
+        <p style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Creating an image that is partially transparent
+            <br> (or "see-through") for the web involves
+            <br> selecting one of two formats:
+        </p>
+    </blockquote>
+    <!-- Transparency GIF -->
+    <h4 style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">TRANSPARENCY GIF</h4>
+    <p>
+        If the transparent part of the image has straight edges and it is <br> 
+        100% transparent (that is, not semi-opaque), you can save the <br> 
+        image as a GIF (with the transparency option selected).
+    </p>
+    <!-- PNG -->
+    <h4 style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PNG</h4>
+    <p>
+        If the transparent part of the image has diagonal or rounded edges <br> 
+        or if you want a semi-opaque transparency or a drop-shadow, then <br> 
+        you will need to save it as a PNG.
+    </p>
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 13px; color: rgb(139, 139, 139);">
+        Transparent PNGs are not fully supported in older browsers, most <br> 
+        notably Internet Explorer 6 (IE6). There is some JavaScript you can <br> 
+        use to get around this issue. The details of this script can be found <br> 
+        in the tools section of the website accompanying this book.
+    </p>
+    <img src="images/transparency.png" alt="Transparency Pictures">
+    <br>
+
+    <!-- HTML5: Figure & Figure Caption -->
+    <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">HTML5 FIGURE & FIGURE CAPTION</h2>
+    <!-- Figure -->
+    <h4><code>< figure></code></h4>
+    <p>
+        Images often come with captions. HTML5 has introduced a new <code>< figure></code><br> 
+        element to contain images and their caption so that the two are associated.
+    </p>
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(139, 139, 139); font-size: 15px;">
+        You can have more than one image inside the <code>< figure></code> <br> 
+        element as long as they all share the same caption.
+    </p>
+
+    <!-- figcaption -->
+    <h4><code>< figcaption></code></h4>
+    <p>
+        The <code>< figcaption></code> element has been added to HTML5 in order to allow <br>
+        web page authors to add a caption to an image.
+    </p>
+    <p>
+        Before these elements were created there was no way to associate an <br> 
+        <code>< img></code> element with its caption.
+    </p>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(139, 139, 139);">
+        Older browsers that do not understand HTML5 elements simply <br> ignore the new elements and display the content of them.
+    </p>
+
+    <!-- Result: -->
+    <h4>Result: </h4>
+    <figure>
+        <img src="images/seaotters.jpeg" alt="Sea Otters">
+    <br>
+        <figcaption>
+            Sea otters hold hands when they sleep so <br> they don't drift away from each other.
+        </figcaption>
+    </figure>
+
+
+
+</body>
+</html>

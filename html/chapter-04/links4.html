@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Links</title>
+</head>
+<body>
+    <h1>Chapter 4: Links</h1>
+    <ul>
+        <li>Creating links between pages</li>
+        <li>Linking to other site</li>
+        <li>Email links</li>
+    </ul>
+    <p>
+        Links are the defining feature of the web <br>
+        because they allow you to move from <br> 
+        one web page to another — enabling the <br> 
+        very idea of browsing or surfing.
+    </p>
+    <p style="font-size: 13px;">You will commonly come across the following types of links:</p>
+    <ul>
+        <li>Links from one website to another</li>
+        <li>Links from one page to another on the same website</li>
+        <li>Links from one part of a web page to another part of the <br>same page </li>
+        <li>Links that open in a new browser window</li>
+        <li>Links that start up your email program and address a new <br>email to someone</li>
+    </ul>
+    <br>
+
+    <h2>WRITING LINKS</h2> <!-- Writing links -->
+    <p>
+        Links are created using the <code>< a></code> element. Users can click on anything <br>
+        between the opening <code>< a></code> tag and the closing <code>< /a></code> tag. You specify <br>
+        which page you want to link to using the <code>href</code> attribute.
+    </p><br>
+    <a href="https://medium.com/@shanikanishadhi1992/20-top-frontend-developers-tools-in-2020-78eeb1b2da5a">
+        20 Top Frontend Developers Tools in 2020
+    </a>
+    <br>
+    
+    <br><h2>LINKING TO OTHER SITES</h2> <!-- Linking to other sites -->
+    <h4><code>< a></code></h4>
+    <p>
+        Links are created using the <code>< a></code> <br> element which has an attribute <br> called <code>href</code>. The value of the <br> 
+        <code>href</code> attribute is the page that <br> you want people to go to when <br> they click on the link.
+    </p>
+    <p>
+        Users can click on anything that appears between the opening <code>< a></code> tag and the closing <code>< /a></code><br>
+        tag and will be taken to the page specified in the href attribute.
+    </p>
+    <p>
+        When you link to a different website, the value of the <code>href</code> <br>
+        attribute will be the full web address for the site, which is known as an <b>absolute</b> URL.
+    </p>
+    <p style="color: silver; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Browsers show links in blue with an underline by default.
+    </p>
+
+    <!-- Absolute urls-->
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: slategrey;">
+        ABSOLUTE URLS
+    </p>
+    <p>
+        <abbr title="Uniform Resource Locator">URL</abbr> stands for Uniform Resource Locator. Every web page has its own URL. This is the <br>
+        web address that you would type into a browser if you wanted to visit that specific page.
+    </p>
+    <p>
+        An absolute URL starts with the domain name for that site, and can be followed by the path <br>
+        to a specific page. If no page is specified, the site will display the homepage.
+    </p>
+
+    <h4>Result: </h4>
+    <p> Morioh
+        <ul>
+            <li><a href="https://morioh.com/explore">Explore</a></li>
+            <li><a href="https://morioh.com/videos">Videos</a></li>
+            <li><a href="https://morioh.com/courses">Courses</a></li>
+            <li><a href="https://manning.postaffiliatepro.com/scripts/97vvlnca93?a_aid=codegeek">Books</a></li>
+            <li><a href="https://morioh.com/tool">Tools</a> </li>
+            <li><a href="https://morioh.com/topics">Topics</a></li>
+            <li><a href="http://on.morioh.net/96d5d36367">Templates</a></li>
+        </ul>
+    </p>
+    <br>
+
+    <h2>LINKING TO OTHER PAGES ON THE SAME SITE</h2> <!-- Linking to other pages on the same site -->
+    <h4><code>< a></code></h4>
+    <p>
+        When you are linking to other pages within the same site, you do not need to specify <br> 
+        the domain name in the URL. You can use a shorthand known as a <b>relative</b> URL. 
+    </p>
+    <p>
+        If all the pages of the site are in the same folder, then the value <br>
+        of the <code>href</code> attribute is just the name of the file.
+    </p> 
+    <p>
+        If you have different pages of a site in different folders, then you can use a slightly more complex <br>
+        syntax to indicate where the page is in relation to the current page. You will learn more about these on the pages 81-84.
+    </p>
+    <p>
+        If you look at the download code for each chapter, you will <br> see that the <code>index.html</code> file contains links that use relative URLs.
+    </p>
+    <!-- Relative URls-->
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: slategrey;">
+        RELATIVE URLS
+    </p>
+    <p>
+        When linking to other pages within the same site, you can use relative URLs. These are like a shorthand version of absolute URLs because you do not need to specify the domain name. <br>
+        We will take a closer look at relative URLs on pages 83-84 as there are several helpful shortcuts you can use to write links to other pages on your own website. <br>
+        Relative URLs help when building a site on your computer because you can create links between pages without having to set up your domain name or hosting.
+    </p>
+    <h4>Result: </h4>
+    <p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About</a></li> 
+            <li><a href="movies.html">Movies</a></li> 
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </p><br>
+
+    <h2>DIRECTORY STRUCTURE</h2> <!-- Directory structure -->
+    <p>
+        On larger websites it's a good idea to organize your code by placing the <br> pages for each different section of the site into a new folder. Folders on a <br>
+        website are sometimes referred to as directories.
+    </p>
+
+    <!-- Structure -->
+    <p style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: slategrey;">
+        STRUCTURE
+    </p>
+    <p>
+        The diagram on the right shows the directory structure for a fictional entertainment listings website called ExampleArts.
+    </p>
+    <p>
+        The top-level folder is known as the <b>root</b> folder. (In this example, the root folder is called <i><b>examplearts</b></i>.) The root folder contains all of the other files and folders for a website.
+    </p>
+    <p>
+        Each section of the site is placed in a separate folder; this helps organize the files.
+    </p>
+
+    <!-- Relationship -->
+    <p style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: slategrey;">
+        RELATIONSHIP
+    </p>
+    <p>
+        The relationship between files and folders on a website is described using the same terminology as a family tree.
+    </p>
+    <p>
+        In the diagram on the right, you can see some relationships have been drawn in.
+    </p>
+    <p>
+        The <i><b>examplearts</b></i> folder is a parent of the <i><b>movies</b></i>, <i><b>music</b></i> and <i><b>theater</b></i> folders. And the the <i><b>movies</b></i>, <i><b>music</b></i> and <i><b>theater</b></i> folders are children of the <i><b>examplearts</b></i> folder.
+    </p>
+
+    <!-- Homepages -->
+    <p style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: slategrey;">
+        HOMEPAGES
+    </p>
+    <p>
+        The main homepage of a site written in HTML (and the homepages of each section in a child folder) is called <i><b>index.html</b></i>.
+    </p>
+    <p>
+        Web servers are usually set up to return the <i><b>index.html</b></i> file if no file name is specified.
+    </p>
+    <p>
+        Therefore, if you enter <code>examplearts.com</code> it will return <code>examplearts.com/index.html</code>, and <code>examplearts.com/music</code> will return <code>examplearts.com/music/index.html</code>.
+    </p>
+
+    <blockquote>
+        <p>If you are working with a content management system, blogging software, or an e-commerce system, you might not have individual files for each page of the website. <br>
+            Instead, these systems often use one template file for each different type of page (such as news articles, blog posts, or products). <br> 
+            Editing the template file would change all of the pages that use that template. Do not change any code that is not HTML or you may break the page.</p>
+    </blockquote>
+    <p>
+        Every page and every image on a website has a <b><abbr title="Uniform Resource Locator">URL</abbr></b>. The URL is made up of the domain name followed by the <b>path</b> to that page or image.
+    </p>
+    <p>
+        The path to the homepage of this site is <code>www.examplearts.com/index.html</code>. The path to the logo for the site is <code>examplearts.com/images/logo.gif</code>.
+    </p>
+    <p>
+        You use URLs when linking to other web pages and when including images in your own site. On the next page, you will meet a shorthand way to link to files on your own site.
+    </p>
+    <img src="images/parentlist.jpg" alt="Directory structure"> <!-- Image Directory structure in folder -->
+    <h5>This root folder contains</h5>
+    <ul>
+        <li>A file called <code>index.html</code> which is the homepage for the entire site</li><br>
+        <li>Individual folders for the movies, music and theatre sections of the site</li>
+    </ul>
+    <h5>Each sub-directory contains:</h5>
+    <ul>
+        <li>A file called <code>index.html</code> which is the homepage for that section</li><br>
+        <li>A reviews page called <code>reviews.html</code></li><br>
+        <li>A listings page called <code>listings.html</code> (except for the DVD section)</li>
+    </ul>
+    <h5>The movies section contains:</h5>
+    <ul>
+        <li>A folder called <i>cinema</i></li><br>
+        <li>A folder called <i>DVD</i></li>
+    </ul><br>
+
+    <!-- Relative URLs -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">RELATIVE URLS</h2>
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: slategray;">
+        Relative URLs can be used when linking to pages within your own website. They provide a shorthand way of telling the browser where to find your files.
+    </p>
+    
+    <p>
+        When you are linking to a page on your own website, you do <br>
+        not need to specify the domain name. You can use <b>relative URLs</b> <br>
+        which are a shorthand way to tell the browser where a page is in relation to the current page.
+    </p>
+    <p>
+        This is especially helpful when creating a new website or learning about HTML because <br> 
+        you can create links between pages when they are only on your personal computer <br> 
+        (before you have got a domain name and uploaded them to the web).
+    </p>
+    <p>
+        Because you do not need to repeat the domain name in each link, they are also quicker to write.
+    </p>
+    <p>
+        If all of the files in your site are in one folder, you simply use the file name for that page.
+    </p>
+    <p>
+        If your site is organized into separate folders (or directories), <br> 
+        you need to tell the browser how to get from the page it is <br> 
+        currently on to the page that you are linking to.
+    </p>
+    <p>
+        If you link to the same page from two different pages you might, <br> 
+        therefore, need to write two different relative URLs.
+    </p>
+    <p>
+        These links make use of the same terminology (borrowed from that of family trees) <br> 
+        you met on the previous page which introduces directory structure.
+    </p>
+    <!-- Image Relative link type -->
+    <img src="images/relativeurls.jpg" alt="Relative link type">
+    <p>
+        When a website is live (that is, uploaded to a web server) you may see a couple of other techniques used that do not work when the files are on your local computer. <br><br>
+        For example, you may see the name of a child folder without the name of a file. In this case the web server will usually try to show the homepage for that section. <br><br>
+        A forward slash will return the homepage for the entire site, and a forward slash followed by a file name will return that file providing it is in the root directory.
+    </p> <br>
+    
+    <!-- Email links-->
+    <h2>EMAIL LINKS</h2>
+    <h4><code>mailto: </code></h4>
+    <p>
+        To create a link that starts up the user's email program and addresses an email to a specified <br>
+        email address, you use the <code>< a></code> element. However, this time the value of the href attribute starts <br>
+        with <code>mailto:</code> and is followed by the email address you want the email to be sent to.
+    </p>
+    <p>
+        On the right you can see that an email link looks just like any other link but, when it is clicked <br>
+        on, the user's email program will open a new email message and address it to the person <br>
+        specified in the link.
+    </p>
+    <h4>Result: </h4><!-- Result -->
+    <a href="mailto:nengbengkak@gmail.com">Email nengbengkak</a><br><br>
+
+    <!-- Opening links in a new window -->
+    <h2>OPENING LINKS IN A NEW WINDOW</h2>
+    <h4><code>target</code></h4>
+    <p>
+        If you want a link to open in a new window, you can use the <code>target</code> attribute on the opening <code>< a></code> tag. The value of this attribute should be <code>_blank</code>. <br><br>
+        One of the most common reasons a web page author might want a link to be opened in a new window is if it points to another website. In such cases, <br>
+        they hope the user will return to the window containing their site after finishing looking at the other one.
+    </p>
+    <blockquote>
+        <p style="color: slategray; font-style: unset;">
+            Generally you should avoid opening links in a new window, but if you do, it is considered
+            <br> good practice to inform users that the link will open a new window before they click on it.
+        </p>
+    </blockquote>
+    <h4>Result: </h4><!-- Result -->
+    <a href="http://www.imdb.com" target="_blank">open in new tab (window)</a>
+    <br><br>
+
+
+    <!-- Linking to specific part of the same page -->
+    <h2>LINKING TO SPECIFIC PART OF THE SAME PAGE</h2>
+    <p>
+        At the top of a long page you might want to add a list of contents that links to the corresponding sections lower down. Or you 
+        <br> might want to add a link from part way down the page back to the top of it to save users from having to scroll back to the top. <br><br>
+        
+        Before you can link to a specific part of a page, you need to identify the points in the page that the link will go to. You do this using the id attribute (which can be  <br>
+        used on every HTML element). You can see that the <code>< h1></code> and <code>< h2></code> elements in this example have been given id attributes that identify those sections of the page. <br><br>
+
+        The value of the <code>id</code> attribute should start with a letter or an underscore (not a number or any other character) and, on a single page, no two <code>id</code> attributes should have the same value. <br><br>
+        
+        To link to an element that uses an <code>id</code> attribute you use the <code>< a></code> element again, but the value of the href attribute starts with the # symbol, followed by the value of the<br>
+        id attribute of the element you want to link to. In this example, <code>< a href="#top"></code> links to the <code>< h1></code> element at the top of the page whose id attribute has a value of top.
+
+    </p>
+    <h4>Result: </h4><!-- Result -->
+    <br>
+    <h3 id="top">Film-Making Terms</h3>
+    <a href="#arc">Arc Shot</a>
+    <a href="#inter">Interlude</a>
+    <a href="#prolg">Prologue</a>
+    
+    <!-- Arc Shot -->
+    <h2 id="arc">Arc Shot</h2>
+    <p>
+        A shot in which the subject is photographed by an encircling or moving camera
+    </p>
+
+    <!-- Interlude -->
+    <h2 id="inter">Interlude</h2>
+    <p>
+        A brief, intervening film scene or sequence, not specifically tied to the plot, that appears within a film
+    </p>
+
+    <!-- Prologue -->
+    <h2 id="prolg">Prologue</h2>
+    <p>
+        A speech, preface, introduction, or brief scene preceding the the main action or plot of a film; contrast to epilogue
+    </p>
+    <p><a href="#top">Top</a></p>
+
+    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: yellowgreen;">Example</p>
+
+
+</body>
+</html>
