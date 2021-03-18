@@ -41,6 +41,261 @@
         </p>
     </blockquote>
     
+    <p style="font-size: 15px; ">
+        Grids allow us to understand <br> complex data by referencing <br> information on two axes. <br><br>
+        Each block in the grid is referred <br> to as a <b>table cell</b>. In HTML a <br> table is written out row by row.
+    </p>
+    <img src="images/tableexample.jpg" alt="table example" title="REUTERS Table">
+
+    <br>
+    <!-- Basic Table Structure -->
+    <h2 style="color: rgb(143, 143, 143);">BASIC TABLE STRUCTURE</h2>
+    <!-- <table> -->
+        <h4><code>< table></code></h4>
+        <p>
+            The <code>< table></code> element is used <br> to create a table. The contents <br> of the table are written out row <br> by row.
+        </p>
+
+    <!-- <tr> -->
+        <h4><code>< tr></code></h4>
+        <p>
+            You indicate the start of each <br> row using the opening <code>< tr></code> tag. <br> (The <code>tr</code> stands for table row.)
+        </p>
+        <p>
+            It is followed by one or more <br> <code>< td></code> elements (one for each cell <br> in that row).
+        </p>
+        <p>
+            At the end of the row you use a <br> closing <code>< /tr></code> tag.
+        </p>
+
+    <!-- <td> -->
+    <h4><code>< td></code></h4>
+    <p>
+        Each cell of a table is <br> represented using a <code>< td></code> <br> element. (The <code>td</code> stands for <br> table data.)
+    </p>
+    <p>
+        At the end of each cell you use a <br> closing <code>< /td></code> tag. 
+    </p>
+
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(94, 94, 94); font-size: 15px;">
+            Some browsers automatically <br> 
+            draw lines around the table <br> 
+            and/or the individual cells. You <br>
+            will learn how to control the <br> 
+            borders of tables using CSS on <br> 
+            pages 309-312 and 337-340. 
+        </p>
+    </blockquote>
+
+    <!-- Example -->
+    <h4>Result: </h4>
+    <table>
+        <tr>
+            <td>13</td>
+            <td>34</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>56</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>13</td>
+            <td>34</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Table Headings -->
+    <h2>TABLE HEADINGS</h2>
+    <!-- <th> -->
+    <h4><code>< th></code></h4>
+    <p>
+        The <th> element is used just <br> 
+            like the <code>< td></code> element but its <br> 
+            purpose is to represent the <br> 
+            heading for either a column or <br> 
+            a row. (The <code>th</code> stands for table <br> 
+            heading.)
+    </p>
+    <p>
+        Even if a cell has no content, <br> 
+        you should still use a <code>< td></code> or <br>
+        <code>< th></code> element to represent <br> 
+        the presence of an empty cell <br> 
+        otherwise the table will not <br> 
+        render correctly. (The first cell <br> 
+        in the first row of this example <br> 
+        shows an empty cell.)
+    </p>
+    <p>
+        Using <code>< th></code> elements for headings helps people who <br> 
+        use screen readers, improves the ability for search engines to index your pages, and also <br> 
+        enables you to control the appearance of tables better when you start to use <abbr title="Cascading Style Sheets">CSS</abbr>.
+    </p>
+    <p>
+        You can use the scope attribute on the <code>< th></code> element to indicate <br> 
+        whether it is a heading for a column or a row. It can take the <br> 
+        values: <code>row</code> to indicate a heading a row or col to indicate a <br> 
+        heading for a column.
+    </p>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(143, 143, 143); font-size: 15px;">
+            Browsers usually display the content of a <code>< th></code> element in bold and in the middle of the cell.
+        </p>
+    </blockquote>
+
+    <!-- Example -->
+    <h4>Result: </h4>
+    <table>
+        <tr>
+            <th></th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </tr>
+        <tr>
+            <th>Ticket Sold</th>
+            <td>34</td>
+            <td>56</td>
+        </tr>
+        <tr>
+            <th>Total Sales</th>
+            <td>56</td>
+            <td>13</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- Spanning Columns -->
+    <h2>SPANNING COLUMNS</h2>
+    <blockquote>
+        <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            Sometimes you may need the entries in a table to stretch across more than one column.
+        </p>
+    </blockquote>
+
+    <p>
+        The <code>colspan</code> attribute can be used on a <code>< td></code> or <code>< th></code> element <br> 
+        and indicates how many columns that cell should run across. <br><br>
+
+        In the example on the right you can see a timetable with five <br> 
+        columns; the first column contains the heading for that row<br>
+        (the day), the remaining four represent one hour time slots.<br><br>
+
+        If you look at the table cell that contains the words 'Geography' <br> 
+        you will see that the value of the <code>colspan</code> attribute is 2, which <br> 
+        indicates that the cell should run across two columns. In the <br> 
+        third row, 'Gym' runs across three columns. <br><br>
+
+        You can see that the second and third rows have fewer <code>< td></code> <br> 
+        elements than there are columns. This is because, when a cell <br> 
+        extends across more than one column, the <code>< td></code> or <code>< th></code> <br> 
+        cells that would have been in the place of the wider cells are <br> 
+        not included in the code.
+    </p>
+
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(94, 94, 94); font-size: 14px;">
+            I added some CSS styles to this example so that you <br> 
+            can see how the cells span more than one column. <br> 
+            You will learn how to do this on pages 250, 337-340.
+        </p>
+    </blockquote>
+
+    <!-- Example -->
+    <h4>Result: </h4>
+    <table>
+        <tr>
+            <th></th>
+            <th>6am</th>
+            <th>7am</th>
+            <th>8am</th>
+            <th>9am</th>
+            <th>10am</th>
+            <th>11am</th>
+        </tr>
+        <tr>
+            <th>Neng</th>
+            <td colspan="2"></td>
+            <td>Beli Bahan</td>
+            <td>Masak</td>
+            <td>Mandi</td>
+            <td>Belajar</td>
+        </tr>
+        <tr>
+            <th>Oti</th>
+            <td colspan="2">Lari</td>
+            <td>Anter Neng</td>
+            <td>Masak</td>
+            <td>Mandi</td>
+            <td>Belajar</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Spanning Rows -->
+    <h2>SPANNING ROWS</h2>
+    <blockquote>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: rgb(94, 94, 94); font-size: 15px;">
+            You may also need entries in a table to stretch <br> down across more than one row.
+        </p>
+    </blockquote>
+
+    <p>
+        The <code>rowspan</code> attribute can be used on a <code>< td></code> or <code>< th></code> element <br> 
+        to indicate how many rows a cell should span down the table. <br><br>
+
+        In the example on the left you can see that ABC is showing a <br> 
+        movie from 6pm - 8pm, whereas the BBC and CNN channels <br> 
+        are both showing two programs during this time period (each <br> 
+        of which lasts one hour). <br><br>
+
+        If you look at the last <code>< tr></code> element, it only contains three <br> 
+        elements even though there are four columns in the result <br> 
+        below. This is because the movie in the <code>< tr></code> element <br> 
+        above it uses the rowspan attribute to stretch down and <br> 
+        take over the cell below. <br><br>
+
+        <blockquote>
+            <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 12px; color: rgb(94, 94, 94);">
+                I have added some CSS styles to this example so that you can see <br> 
+                how the cells span more than one row. You will learn how to apply <br> 
+                these CSS styles to tables on pages 250, 337-340.
+            </p>
+        </blockquote>
+    </p>
+
+    <!-- Result -->
+    <table>
+        <tr>
+            <th></th>
+            <th>6am</th>
+            <th>7am</th>
+            <th>8am</th>
+            <th>9am</th>
+            <th>10am</th>
+            <th>11am</th>
+        </tr>
+        <tr>
+            <th>Neng</th>
+            <td colspan="2">Tidur</td>
+            <td>Beli Bahan</td>
+            <td rowspan="2">Masak</td>
+            <td rowspan="2">Mandi</td>
+            <td rowspan="2">Belajar</td>
+        </tr>
+        <tr>
+            <th>Oti</th>
+            <td colspan="2">Lari</td>
+            <td>Anter Neng</td>
+        </tr>
+    </table>
+
+    
 
 
 </body>
